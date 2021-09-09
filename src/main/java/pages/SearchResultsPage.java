@@ -13,7 +13,7 @@ public class SearchResultsPage extends BasePage {
     @FindBy(xpath = "//div[@class='sidebar-block__inner ng-star-inserted']//input[@class='sidebar-search__input ng-untouched ng-pristine ng-valid']")
     private Input brandFilterInput;
 
-    @FindBy(xpath = "//div[@class='goods-tile__prices']//app-buy-button//button[@aria-label='Купить']")
+    @FindBy(xpath = "//button[@class='buy-button goods-tile__buy-button ng-star-inserted']")
     private List<Button> buyButtonListOfProducts;
 
     @FindBy(xpath = "//div[@class='sidebar-block ng-star-inserted']//ul[@class='checkbox-filter ng-star-inserted'][2]//li//a")

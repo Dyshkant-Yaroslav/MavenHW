@@ -25,7 +25,7 @@ public class BaseTest {
     }
 
 
-    @DataProvider(name = "getFilterData", parallel = false)
+    @DataProvider(name = "getFilterData", parallel = true)
     public Object[][] getFilterData() throws JAXBException {
         File file = new File("src\\main\\resources\\rozetkaFilterData.xml");
         JAXBContext jaxbContext = JAXBContext.newInstance(RozetkaFilter.class);
