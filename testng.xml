@@ -6,4 +6,8 @@
             <class name="rozetka.tests.SumInCartIsLessThanRequiredTest"/>
         </classes>
     </test>
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="util.TestNGListener"/>
+    </listeners>
 </suite>

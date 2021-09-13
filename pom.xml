@@ -15,13 +15,24 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.0.0-M5</version>
+                    <version>2.19.1</version>
                     <configuration>
                         <forkCount>3</forkCount>
                         <reuseForks>true</reuseForks>
                         <suiteXmlFiles>
                             <suiteXmlFile>testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
+                        <properties>
+                            <property>
+                                <name>usedefaultlisteners</name>
+                                <value>false</value>
+                            </property>
+                            <property>
+                                <name>listener</name>
+                                <value>org.uncommons.reportng.HTMLReporter, src.main.java.util.TestNGListener
+                                </value>
+                            </property>
+                        </properties>
                     </configuration>
                 </plugin>
             </plugins>
@@ -46,7 +57,6 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.14.3</version>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -78,6 +88,20 @@
             <artifactId>jaxb-impl</artifactId>
             <version>2.2-promoted-b65</version>
         </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>reportng</artifactId>
+            <version>1.2.2</version>
+            <scope>test</scope>
+        </dependency>
+
 
     </dependencies>
 

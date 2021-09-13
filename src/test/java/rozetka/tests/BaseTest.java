@@ -19,7 +19,7 @@ public class BaseTest {
         WebdriverMultitone.setProperties();
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void close() {
         WebdriverMultitone.closeMultiDriver();
     }
