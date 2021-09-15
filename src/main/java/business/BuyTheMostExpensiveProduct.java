@@ -1,5 +1,7 @@
 package business;
 
+import io.qameta.allure.Step;
+
 public class BuyTheMostExpensiveProduct {
 
     private FactoryPages factoryPages = new FactoryPages();
